@@ -4,9 +4,9 @@ import conferenceImage from '../assets/conference-image.png';
 export default function About() {
   return (
     <section className="about-container" id="about-link">
+      <h1>About Me</h1>
     <img className="about-img" src={conferenceImage} alt="Tyler on a stage presenting" />
     <article className="about-content">
-      <h1>About Me</h1>
       <p>
         I'm Tyler Yannes - I live in Austin, TX and I'm a hardworking professional with over 7 years of experience in 
         the Shopify ecommerce ecosystem. I have worked with over 100 brands to develop growth
