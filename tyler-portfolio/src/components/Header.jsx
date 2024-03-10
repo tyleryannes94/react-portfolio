@@ -7,10 +7,10 @@ function Header() {
       <h1 className="navbar-h1">Tyler Yannes</h1>
       <nav>
         <ul>
-          <li><Link to="/github">Github</Link></li>
-          <li><Link to="/linkedin">LinkedIn</Link></li>
           <li><Link to="/about">About Me</Link></li>
+          <li><Link to="/portfolio">Portfolio</Link></li> 
           <li><Link to="/contact">Contact Me</Link></li>
+          <li><Link to="/resume">Resume</Link></li> 
         </ul>
       </nav>
     </header>
