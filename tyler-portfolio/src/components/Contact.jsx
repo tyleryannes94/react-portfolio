@@ -66,26 +66,31 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact-container">
-      <h2>Contact Me</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="form-group">
-          <label>Name</label>
-          <input type="text" name="user_name" required onChange={handleInputChange} onBlur={handleBlur} />
-          {formErrors.user_name && <p className="error">{formErrors.user_name}</p>}
+    <div className="container my-24 mx-auto px-6">
+      <section className="mb-32 text-center">
+        <div className="mx-auto max-w-[700px] px-3">
+          <h2 className="mb-12 text-3xl font-bold">Contact Me</h2>
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="relative mb-6">
+              <input type="text" name="user_name" required onChange={handleInputChange} onBlur={handleBlur} className="peer block w-full rounded border-0 bg-transparent py-2 px-3 leading-tight text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder=" " />
+              <label className="absolute left-3 -top-3.5 text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" htmlFor="user_name">Name</label>
+              {formErrors.user_name && <p className="text-xs text-red-500">{formErrors.user_name}</p>}
+            </div>
+            <div className="relative mb-6">
+              <input type="email" name="user_email" required onChange={handleInputChange} onBlur={handleBlur} className="peer block w-full rounded border-0 bg-transparent py-2 px-3 leading-tight text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder=" " />
+              <label className="absolute left-3 -top-3.5 text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" htmlFor="user_email">Email</label>
+              {formErrors.user_email && <p className="text-xs text-red-500">{formErrors.user_email}</p>}
+            </div>
+            <div className="relative mb-6">
+              <textarea name="message" required onChange={handleInputChange} onBlur={handleBlur} className="peer block w-full rounded border-0 bg-transparent py-2 px-3 leading-tight text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder=" "></textarea>
+              <label className="absolute left-3 -top-3.5 text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" htmlFor="message">Message</label>
+              {formErrors.message && <p className="text-xs text-red-500">{formErrors.message}</p>}
+            </div>
+            <button type="submit" className="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
+          </form>
         </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input type="email" name="user_email" required onChange={handleInputChange} onBlur={handleBlur} />
-          {formErrors.user_email && <p className="error">{formErrors.user_email}</p>}
-        </div>
-        <div className="form-group">
-          <label>Message</label>
-          <textarea name="message" required onChange={handleInputChange} onBlur={handleBlur} />
-          {formErrors.message && <p className="error">{formErrors.message}</p>}
-        </div>
-        <button type="submit" className="send-button">Send</button>
-      </form>
+      </section>
     </div>
   );
+  
 }
