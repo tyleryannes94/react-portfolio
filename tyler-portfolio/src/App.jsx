@@ -10,7 +10,8 @@ function App() {
   return (
     <Router>
       <div>
-        <Header />
+        {/* Add header comp to all routes */}
+        <Header /> 
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
+        {/* Add footer comp to all pages */}
         <Footer />
       </div>
     </Router>
