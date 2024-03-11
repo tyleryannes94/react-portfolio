@@ -15,8 +15,11 @@ export default function Contact() {
     )
     .then((result) => {
         console.log('SUCCESS!', result.text);
+        alert("Form submitted successfully!"); 
+        form.current.reset(); 
     }, (error) => {
         console.log('FAILED...', error.text);
+        alert("Failed to submit the form. Please try again."); 
     });
   };
 
