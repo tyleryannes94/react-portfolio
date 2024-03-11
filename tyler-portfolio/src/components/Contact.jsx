@@ -7,7 +7,11 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_PUBLIC_KEY
     )
     .then((result) => {
         console.log('SUCCESS!', result.text);
