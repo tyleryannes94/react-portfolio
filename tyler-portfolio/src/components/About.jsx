@@ -1,9 +1,13 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import conferenceImage from '../assets/conference-image.png';
 
 export default function About() {
   return (
-    <div className="container my-24 mx-auto md:px-6">
+    <motion.div className="container my-24 mx-auto md:px-6"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}>
       <section className="mb-32 text-center lg:text-left">
         <div className="flex flex-wrap">
           <div className="mb-12 w-full lg:mb-0 lg:w-5/12">
@@ -34,6 +38,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
-  );
+      </motion.div>
+      );
 }

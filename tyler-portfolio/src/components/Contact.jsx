@@ -1,13 +1,11 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
 
 export default function Contact() {
   const form = useRef();
-  const [formValues, setFormValues] = useState({
-    user_name: '',
-    user_email: '',
-    message: '',
-  });
+  const [formValues, setFormValues] = useState({ user_name: '', user_email: '', message: '' });
   const [formErrors, setFormErrors] = useState({});
 
   const handleInputChange = (e) => {
@@ -66,11 +64,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="container my-24 mx-auto px-6">
-      <section className="mb-32 text-center">
-        <div className="mx-auto max-w-[700px] px-3">
-          <h2 className="mb-12 text-3xl font-bold">Contact Me</h2>
-          <form ref={form} onSubmit={sendEmail}>
+    <motion.div className="container my-24 mx-auto px-6"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}>
+    <section className="mb-32 text-center">
+      <div className="mx-auto max-w-[700px] px-3">
+        <h2 className="mb-12 text-3xl font-bold">Contact Me</h2>
+        <form ref={form} onSubmit={sendEmail}>
             <div className="relative mb-6">
               <input type="text" name="user_name" required onChange={handleInputChange} onBlur={handleBlur} className="peer block w-full rounded border-0 bg-transparent py-2 px-3 leading-tight text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder=" " />
               <label className="absolute left-3 -top-3.5 text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm" htmlFor="user_name">Name</label>
@@ -90,7 +91,7 @@ export default function Contact() {
           </form>
         </div>
       </section>
-    </div>
+      </motion.div>
   );
   
 }
