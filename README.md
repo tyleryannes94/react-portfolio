@@ -16,11 +16,11 @@
 
 Welcome to the GitHub repository for my portfolio, developed using React. This portfolio showcases my web development projects and highlights my proficiency in building single-page applications. The portfolio is designed with a mobile-first approach and utilizes the latest web technologies to stand out among other developers.
 
-Deployed Application: [<Portfolio Link>](Your-Portfolio-URL)
+Deployed Application: https://main--tyler-yannes-react-portfolio.netlify.app/
 
-## App Demo GIF
+## App 
+<img width="1526" alt="Screenshot 2024-03-13 at 8 50 45 AM" src="https://github.com/tyleryannes94/react-portfolio/assets/144497240/1a7d681b-178a-4722-a99c-c4bb19d93ab1">
 
-tyler-portfolio/src/assets/react-portfolio.gif
 
 ## User Story
 
