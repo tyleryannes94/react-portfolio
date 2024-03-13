@@ -15,9 +15,9 @@ export default function Portfolio() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const projects = [
+    { img: project3Image, name: 'Project 3', link: 'https://workout-buddy-2.onrender.com/' },
     { img: project1Image, name: 'Project 1', link: 'https://github.com/Donnie1129/marvel-character-personality-quiz' },
     { img:  resoluteTrackerImage, name: 'Project 2', link: 'https://github.com/tyleryannes94/health-tracker' }, 
-    { img: project3Image, name: 'Project 3', link: 'https://github.com/tyleryannes94/workout-buddy' },
     { img: module12Image, name: 'Module 12', link: 'https://github.com/tyleryannes94/social-media-api' },
     { img: module13Image, name: 'Module 13', link: 'https://github.com/tyleryannes94/ecommerce-backend' },
     { img: module18Image, name: 'Module 18', link: 'https://github.com/tyleryannes94/social-media-api' },
